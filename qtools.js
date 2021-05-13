@@ -1,11 +1,11 @@
 'use strict';
 var events = require('events'),
 	util = require('util'),
-	addBaseFunctions = require('qtoolsBase'),
-	addLogFunctions = require('qtools-log'),
-	nodeManipulation = require('nodeManipulation'),
+	addBaseFunctions = require('./lib/qtoolsBase'),
+	addLogFunctions = require('./lib/qtools-log'),
+	nodeManipulation = require('./lib/nodeManipulation'),
 	lodash = require('lodash'),
-	addConfigFileProcessor = require('qtools-config-file-processor-dependent-version');
+	addConfigFileProcessor = require('./lib/qtools-config-file-processor-dependent-version');
 
 const dayjs = require('dayjs');
 
@@ -63,11 +63,11 @@ var moduleFunction = function(employer, args={}) {
 	addConfigFileProcessor(this);
 	
 	if (args.updatePrototypes){
-		require('qtFunctionalLib');
-		this.qt=require('qtools-functional-library');
+		require('./lib/qtFunctionalLib'); //an early effort, still here because qtools is deprecated and I do not want to debug it
+		this.qt=require('qtools-functional-library'); //this is now a real supported module
 	}
 	
-	const commandLineParser=require('qtools-parse-command-line');
+	const commandLineParser=require('qtools-parse-command-line'); //this is now a real supported module
 
 
 	Object.assign(this, commandLineParser)
