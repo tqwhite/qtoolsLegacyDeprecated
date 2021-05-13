@@ -1,0 +1,19 @@
+{
+  "name": "qtools",
+  "version": "0.0.0",
+  "description": "TQ's Utilities for NodeJS",
+  "main": "qtools.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "utilities"
+  ],
+  "author": "TQ White II",
+  "license": "ISC",
+  "dependencies": {
+    "render": "*",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {}
+}
