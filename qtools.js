@@ -7,7 +7,7 @@ var events = require('events'),
 	lodash = require('lodash'),
 	addConfigFileProcessor = require('./lib/qtools-config-file-processor-dependent-version');
 
-const dayjs = require('dayjs');
+//const dayjs = require('dayjs');
 
 //START OF moduleFunction() ============================================================
 
@@ -38,7 +38,7 @@ var moduleFunction = function(employer, args={}) {
 	}
 	
 	this._ = lodash;
-	this.dayjs = dayjs; //https://www.npmjs.com/package/dayjs
+//	this.dayjs = dayjs; //https://www.npmjs.com/package/dayjs
 
 	this.ping = function() {
 		//remember, 'this' refers to employer object because of assignment in object. could be handy.
